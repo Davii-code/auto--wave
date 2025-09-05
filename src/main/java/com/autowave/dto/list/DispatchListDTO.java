@@ -18,4 +18,5 @@ public class DispatchListDTO {
     private LocalDateTime sentAt;
     private Boolean delivered;
     private Boolean responded;
+    private Boolean pending;
 }

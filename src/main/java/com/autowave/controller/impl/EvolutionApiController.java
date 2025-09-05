@@ -4,6 +4,7 @@ import com.autowave.controller.IEvolutionApiController;
 import com.autowave.dto.evolution.ConnectInstanceResponseDTO;
 import com.autowave.dto.evolution.ConnectionStatusDTO;
 import com.autowave.dto.evolution.ClientSendMessageDTO;
+import com.autowave.dto.evolution.EvolutionWebhookDTO;
 import com.autowave.service.IEvolutionApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -74,4 +75,12 @@ public class EvolutionApiController implements IEvolutionApiController {
         Boolean isWhatsApp = service.checkIsWhatsApp(number);
         return ResponseEntity.ok(isWhatsApp);
     }
+
+    @PostMapping("/webhook")
+    @PreAuthorize(value = "hasRole('ROLE_EVOLUTION_WEBHOOK')")
+    public ResponseEntity<Void> webhook(@RequestBody EvolutionWebhookDTO event) {
+        service.processWebhook(event);
+        return ResponseEntity.ok().build();
+    }
+
 }

@@ -1,0 +1,17 @@
+package com.autowave.dto.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+import java.math.BigDecimal;
+
+@Data
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+public class PaymentRequestDTO {
+    private SubscriptionRequestDTO subscription;
+    private BigDecimal amount;
+}

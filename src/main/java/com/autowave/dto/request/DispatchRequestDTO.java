@@ -25,4 +25,5 @@ public class DispatchRequestDTO {
     private Boolean delivered;
 
     private Boolean responded;
+    private Boolean pending;
 }

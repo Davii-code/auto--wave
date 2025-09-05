@@ -1,0 +1,627 @@
+Listagem de caminhos de pasta para o volume Acer
+O número de série do volume é 3201-5B7F
+C:.
+|   .gitattributes
+|   .gitignore
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|   projeto_estrutura.txt
+|   README.md
+|   
++---.idea
+|   |   .gitignore
+|   |   compiler.xml
+|   |   dataSources.local.xml
+|   |   dataSources.xml
+|   |   encodings.xml
+|   |   git_toolbox_blame.xml
+|   |   git_toolbox_prj.xml
+|   |   jarRepositories.xml
+|   |   misc.xml
+|   |   uiDesigner.xml
+|   |   vcs.xml
+|   |   workspace.xml
+|   |   
+|   +---dataSources
+|   |   |   75caffe9-5f32-49d7-8361-ca00e647decd.xml
+|   |   |   
+|   |   \---75caffe9-5f32-49d7-8361-ca00e647decd
+|   |       \---storage_v2
+|   |           \---_src_
+|   |               \---database
+|   |                   |   auto_wave.iaMGYw.meta
+|   |                   |   evolution.e5-QDw.meta
+|   |                   |   postgres.edMnLQ.meta
+|   |                   |   
+|   |                   +---auto_wave.iaMGYw
+|   |                   |   \---schema
+|   |                   |           information_schema.FNRwLQ.meta
+|   |                   |           information_schema.FNRwLQ.zip
+|   |                   |           pg_catalog.0S1ZNQ.meta
+|   |                   |           pg_catalog.0S1ZNQ.zip
+|   |                   |           public.abK9xQ.meta
+|   |                   |           
+|   |                   +---evolution.e5-QDw
+|   |                   |   \---schema
+|   |                   |           public.abK9xQ.meta
+|   |                   |           
+|   |                   \---postgres.edMnLQ
+|   |                       \---schema
+|   |                               public.abK9xQ.meta
+|   |                               
+|   \---inspectionProfiles
+|           Project_Default.xml
+|           
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|           
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---autowave
+|   |   |           |   AppStartupRunner.java
+|   |   |           |   AutowaveApplication.java
+|   |   |           |   
+|   |   |           +---annotation
+|   |   |           |       CEPValidate.java
+|   |   |           |       CPFValidate.java
+|   |   |           |       EmailValidate.java
+|   |   |           |       NumberPhoneValidate.java
+|   |   |           |       PasswordValidate.java
+|   |   |           |       
+|   |   |           +---base
+|   |   |           |   +---annotation
+|   |   |           |   |       MandatoryField.java
+|   |   |           |   |       
+|   |   |           |   +---config
+|   |   |           |   |       ApiSecurityConfig.java
+|   |   |           |   |       ApiSwaggerConfig.java
+|   |   |           |   |       ApiWebConfig.java
+|   |   |           |   |       Constants.java
+|   |   |           |   |       
+|   |   |           |   +---controller
+|   |   |           |   |   |   IAbstractController.java
+|   |   |           |   |   |   IAbstractCrudController.java
+|   |   |           |   |   |   IAbstractCrudFileController.java
+|   |   |           |   |   |   IAuthController.java
+|   |   |           |   |   |   
+|   |   |           |   |   \---impl
+|   |   |           |   |           AbstractController.java
+|   |   |           |   |           AbstractCrudController.java
+|   |   |           |   |           AbstractCrudFileController.java
+|   |   |           |   |           AuthController.java
+|   |   |           |   |           
+|   |   |           |   +---domain
+|   |   |           |   |       GenericModel.java
+|   |   |           |   |       
+|   |   |           |   +---dto
+|   |   |           |   |       AuthDTO.java
+|   |   |           |   |       CredentialDTO.java
+|   |   |           |   |       DTOFile.java
+|   |   |           |   |       FileDTO.java
+|   |   |           |   |       PasswordResetToken.java
+|   |   |           |   |       
+|   |   |           |   +---enums
+|   |   |           |   |       ApiErrorEnum.java
+|   |   |           |   |       MessageCode.java
+|   |   |           |   |       MessageType.java
+|   |   |           |   |       ValidationActionsEnum.java
+|   |   |           |   |       
+|   |   |           |   +---exception
+|   |   |           |   |       ApiResponseExceptionHandler.java
+|   |   |           |   |       BusinessException.java
+|   |   |           |   |       DataException.java
+|   |   |           |   |       FilterChainExceptionHandler.java
+|   |   |           |   |       Message.java
+|   |   |           |   |       MessageResponse.java
+|   |   |           |   |       ParameterRequiredException.java
+|   |   |           |   |       SecurityException.java
+|   |   |           |   |       
+|   |   |           |   +---mapper
+|   |   |           |   |       GenericMapper.java
+|   |   |           |   |       
+|   |   |           |   +---reflection
+|   |   |           |   |       ApiReflectionUtils.java
+|   |   |           |   |       
+|   |   |           |   +---security
+|   |   |           |   |   |   Credential.java
+|   |   |           |   |   |   IAuthenticationProvider.java
+|   |   |           |   |   |   ICredentialProvider.java
+|   |   |           |   |   |   
+|   |   |           |   |   \---impl
+|   |   |           |   |           AuthenticationProvider.java
+|   |   |           |   |           CredentialProvider.java
+|   |   |           |   |           JwtAuthenticationFilter.java
+|   |   |           |   |           KeyToken.java
+|   |   |           |   |           LogoutService.java
+|   |   |           |   |           TokenBuilder.java
+|   |   |           |   |           
+|   |   |           |   +---service
+|   |   |           |   |   |   IAbstractService.java
+|   |   |           |   |   |   IEmailService.java
+|   |   |           |   |   |   IUserProviderService.java
+|   |   |           |   |   |   
+|   |   |           |   |   \---impl
+|   |   |           |   |           AbstractService.java
+|   |   |           |   |           AuthClaimResolve.java
+|   |   |           |   |           AuthService.java
+|   |   |           |   |           EmailService.java
+|   |   |           |   |           UserPasswordService.java
+|   |   |           |   |           
+|   |   |           |   \---validation
+|   |   |           |           IValidations.java
+|   |   |           |           
+|   |   |           +---client
+|   |   |           |       EvolutionApiClient.java
+|   |   |           |       
+|   |   |           +---config
+|   |   |           |       SecurityConfig.java
+|   |   |           |       SwaggerConfig.java
+|   |   |           |       
+|   |   |           +---controller
+|   |   |           |   |   ICampaingController.java
+|   |   |           |   |   IClientController.java
+|   |   |           |   |   IDispatchController.java
+|   |   |           |   |   IEvolutionApiController.java
+|   |   |           |   |   IPaymentController.java
+|   |   |           |   |   IPlanController.java
+|   |   |           |   |   ISubscriptionController.java
+|   |   |           |   |   IUserController.java
+|   |   |           |   |   
+|   |   |           |   \---impl
+|   |   |           |           CampaignController.java
+|   |   |           |           ClientController.java
+|   |   |           |           DispatchController.java
+|   |   |           |           EvolutionApiController.java
+|   |   |           |           PaymentController.java
+|   |   |           |           PlanController.java
+|   |   |           |           SubscriptionController.java
+|   |   |           |           UserController.java
+|   |   |           |           
+|   |   |           +---dto
+|   |   |           |   +---evolution
+|   |   |           |   |       ClientSendMessageDTO.java
+|   |   |           |   |       ConnectInstanceResponseDTO.java
+|   |   |           |   |       ConnectionStatusDTO.java
+|   |   |           |   |       CreateInstanceRequestDTO.java
+|   |   |           |   |       CreateInstanceResponseDTO.java
+|   |   |           |   |       EvolutionSendMessageDTO.java
+|   |   |           |   |       EvolutionWebhookDTO.java
+|   |   |           |   |       
+|   |   |           |   +---list
+|   |   |           |   |       CampaignListDTO.java
+|   |   |           |   |       ClientListDTO.java
+|   |   |           |   |       DispatchListDTO.java
+|   |   |           |   |       PaymentListDTO.java
+|   |   |           |   |       PlanListDTO.java
+|   |   |           |   |       SubscriptionListDTO.java
+|   |   |           |   |       UserListDTO.java
+|   |   |           |   |       
+|   |   |           |   +---report
+|   |   |           |   |       CampaignStatsDTO.java
+|   |   |           |   |       
+|   |   |           |   +---request
+|   |   |           |   |       CampaignRequestDTO.java
+|   |   |           |   |       CampaignRequestSecondDTO.java
+|   |   |           |   |       ClientRequestDTO.java
+|   |   |           |   |       ClientRequestSecondDTO.java
+|   |   |           |   |       DispatchRequestDTO.java
+|   |   |           |   |       PaymentRequestDTO.java
+|   |   |           |   |       PlanRequestDTO.java
+|   |   |           |   |       SubscriptionRequestDTO.java
+|   |   |           |   |       UserRequestClientDTO.java
+|   |   |           |   |       UserRequestDTO.java
+|   |   |           |   |       
+|   |   |           |   \---response
+|   |   |           |           CampaignResponseDTO.java
+|   |   |           |           ClientResponseDTO.java
+|   |   |           |           DispatchResponseDTO.java
+|   |   |           |           PaymentResponseDTO.java
+|   |   |           |           PlanResponseDTO.java
+|   |   |           |           SubscriptionResponseDTO.java
+|   |   |           |           UserResponseDTO.java
+|   |   |           |           
+|   |   |           +---entities
+|   |   |           |       Campaign.java
+|   |   |           |       Client.java
+|   |   |           |       Dispatch.java
+|   |   |           |       EvolutionInstance.java
+|   |   |           |       Payment.java
+|   |   |           |       Plan.java
+|   |   |           |       Role.java
+|   |   |           |       Subscription.java
+|   |   |           |       User.java
+|   |   |           |       UserGroup.java
+|   |   |           |       
+|   |   |           +---enums
+|   |   |           |       BillingPeriod.java
+|   |   |           |       CampaignType.java
+|   |   |           |       ErrorEnum.java
+|   |   |           |       PaymentStatus.java
+|   |   |           |       SubscriptionStatus.java
+|   |   |           |       
+|   |   |           +---exception
+|   |   |           |       CustomHandlerException.java
+|   |   |           |       
+|   |   |           +---mapper
+|   |   |           |       CampaingMapper.java
+|   |   |           |       ClientMapper.java
+|   |   |           |       DispatchMapper.java
+|   |   |           |       PaymentMapper.java
+|   |   |           |       PlanMapper.java
+|   |   |           |       SubscriptionMapper.java
+|   |   |           |       UserMapper.java
+|   |   |           |       
+|   |   |           +---reflection
+|   |   |           |       ReflectionUtil.java
+|   |   |           |       
+|   |   |           +---repository
+|   |   |           |       CampaignRepository.java
+|   |   |           |       ClientRepository.java
+|   |   |           |       DispatchRepository.java
+|   |   |           |       PaymentRepository.java
+|   |   |           |       PlanRepository.java
+|   |   |           |       RoleRepository.java
+|   |   |           |       SubscriptionRepository.java
+|   |   |           |       UserGroupRepository.java
+|   |   |           |       UserRepository.java
+|   |   |           |       
+|   |   |           +---service
+|   |   |           |   |   ICampaingService.java
+|   |   |           |   |   IClientService.java
+|   |   |           |   |   IDispatchService.java
+|   |   |           |   |   IEvolutionApiService.java
+|   |   |           |   |   IPaymentService.java
+|   |   |           |   |   IPlanService.java
+|   |   |           |   |   ISubscriptionService.java
+|   |   |           |   |   IUserService.java
+|   |   |           |   |   
+|   |   |           |   +---impl
+|   |   |           |   |       CampaignScheduler.java
+|   |   |           |   |       CampaignService.java
+|   |   |           |   |       ClientService.java
+|   |   |           |   |       DispatchService.java
+|   |   |           |   |       EvolutionApiService.java
+|   |   |           |   |       MessageDispatcherService.java
+|   |   |           |   |       PaymentService.java
+|   |   |           |   |       PlanService.java
+|   |   |           |   |       SubscriptionService.java
+|   |   |           |   |       UserProviderService.java
+|   |   |           |   |       UserService.java
+|   |   |           |   |       
+|   |   |           |   \---validations
+|   |   |           |       \---user
+|   |   |           |               UserEmailValidate.java
+|   |   |           |               UserExistEmail.java
+|   |   |           |               UserExistLogin.java
+|   |   |           |               
+|   |   |           \---util
+|   |   |                   Util.java
+|   |   |                   
+|   |   \---resources
+|   |           .env
+|   |           application.properties
+|   |           docker-compose.yml
+|   |           messages.properties
+|   |           
+|   \---test
+|       \---java
+|           \---com
+|               \---autowave
+|                       AutowaveApplicationTests.java
+|                       
+\---target
+    |   autowave-0.0.1-SNAPSHOT.jar
+    |   autowave-0.0.1-SNAPSHOT.jar.original
+    |   
+    +---classes
+    |   |   .env
+    |   |   application.properties
+    |   |   docker-compose.yml
+    |   |   messages.properties
+    |   |   
+    |   \---com
+    |       \---autowave
+    |           |   AppStartupRunner.class
+    |           |   AutowaveApplication.class
+    |           |   
+    |           +---annotation
+    |           |       CEPValidate.class
+    |           |       CPFValidate.class
+    |           |       EmailValidate.class
+    |           |       NumberPhoneValidate.class
+    |           |       PasswordValidate.class
+    |           |       
+    |           +---base
+    |           |   +---annotation
+    |           |   |       MandatoryField.class
+    |           |   |       
+    |           |   +---config
+    |           |   |       ApiSecurityConfig.class
+    |           |   |       ApiSwaggerConfig.class
+    |           |   |       ApiWebConfig.class
+    |           |   |       Constants.class
+    |           |   |       
+    |           |   +---controller
+    |           |   |   |   IAbstractController.class
+    |           |   |   |   IAbstractCrudController.class
+    |           |   |   |   IAbstractCrudFileController.class
+    |           |   |   |   IAuthController.class
+    |           |   |   |   
+    |           |   |   \---impl
+    |           |   |           AbstractController.class
+    |           |   |           AbstractCrudController.class
+    |           |   |           AbstractCrudFileController.class
+    |           |   |           AuthController.class
+    |           |   |           
+    |           |   +---domain
+    |           |   |       GenericModel.class
+    |           |   |       
+    |           |   +---dto
+    |           |   |       AuthDTO.class
+    |           |   |       CredentialDTO$CredentialDTOBuilder.class
+    |           |   |       CredentialDTO.class
+    |           |   |       DTOFile.class
+    |           |   |       FileDTO$FileDTOBuilder.class
+    |           |   |       FileDTO$FileDTOBuilderImpl.class
+    |           |   |       FileDTO.class
+    |           |   |       PasswordResetToken$PasswordResetTokenBuilder.class
+    |           |   |       PasswordResetToken$PasswordResetTokenBuilderImpl.class
+    |           |   |       PasswordResetToken.class
+    |           |   |       
+    |           |   +---enums
+    |           |   |       ApiErrorEnum.class
+    |           |   |       MessageCode.class
+    |           |   |       MessageType.class
+    |           |   |       ValidationActionsEnum.class
+    |           |   |       
+    |           |   +---exception
+    |           |   |       ApiResponseExceptionHandler.class
+    |           |   |       BusinessException.class
+    |           |   |       DataException.class
+    |           |   |       FilterChainExceptionHandler.class
+    |           |   |       Message.class
+    |           |   |       MessageResponse.class
+    |           |   |       ParameterRequiredException.class
+    |           |   |       SecurityException.class
+    |           |   |       
+    |           |   +---mapper
+    |           |   |       GenericMapper.class
+    |           |   |       
+    |           |   +---reflection
+    |           |   |       ApiReflectionUtils.class
+    |           |   |       
+    |           |   +---security
+    |           |   |   |   Credential.class
+    |           |   |   |   IAuthenticationProvider.class
+    |           |   |   |   ICredentialProvider.class
+    |           |   |   |   
+    |           |   |   \---impl
+    |           |   |           AuthenticationProvider.class
+    |           |   |           CredentialProvider.class
+    |           |   |           JwtAuthenticationFilter.class
+    |           |   |           KeyToken.class
+    |           |   |           LogoutService.class
+    |           |   |           TokenBuilder$JWTToken.class
+    |           |   |           TokenBuilder$TokenType.class
+    |           |   |           TokenBuilder.class
+    |           |   |           
+    |           |   +---service
+    |           |   |   |   IAbstractService.class
+    |           |   |   |   IEmailService.class
+    |           |   |   |   IUserProviderService.class
+    |           |   |   |   
+    |           |   |   \---impl
+    |           |   |           AbstractService.class
+    |           |   |           AuthClaimResolve.class
+    |           |   |           AuthService.class
+    |           |   |           EmailService.class
+    |           |   |           UserPasswordService.class
+    |           |   |           
+    |           |   \---validation
+    |           |           IValidations.class
+    |           |           
+    |           +---client
+    |           |       EvolutionApiClient.class
+    |           |       
+    |           +---config
+    |           |       SecurityConfig.class
+    |           |       SwaggerConfig.class
+    |           |       
+    |           +---controller
+    |           |   |   ICampaingController.class
+    |           |   |   IClientController.class
+    |           |   |   IDispatchController.class
+    |           |   |   IEvolutionApiController.class
+    |           |   |   IUserController.class
+    |           |   |   
+    |           |   \---impl
+    |           |           CampaignController.class
+    |           |           ClientController.class
+    |           |           DispatchController.class
+    |           |           EvolutionApiController.class
+    |           |           UserController.class
+    |           |           
+    |           +---dto
+    |           |   +---evolution
+    |           |   |       ClientSendMessageDTO$ClientSendMessageDTOBuilder.class
+    |           |   |       ClientSendMessageDTO$ClientSendMessageDTOBuilderImpl.class
+    |           |   |       ClientSendMessageDTO.class
+    |           |   |       ConnectInstanceResponseDTO$ConnectInstanceResponseDTOBuilder.class
+    |           |   |       ConnectInstanceResponseDTO$ConnectInstanceResponseDTOBuilderImpl.class
+    |           |   |       ConnectInstanceResponseDTO.class
+    |           |   |       ConnectionStatusDTO$ConnectionStatusDTOBuilder.class
+    |           |   |       ConnectionStatusDTO$ConnectionStatusDTOBuilderImpl.class
+    |           |   |       ConnectionStatusDTO.class
+    |           |   |       CreateInstanceRequestDTO$CreateInstanceRequestDTOBuilder.class
+    |           |   |       CreateInstanceRequestDTO$CreateInstanceRequestDTOBuilderImpl.class
+    |           |   |       CreateInstanceRequestDTO.class
+    |           |   |       CreateInstanceResponseDTO$CreateInstanceResponseDTOBuilder.class
+    |           |   |       CreateInstanceResponseDTO$CreateInstanceResponseDTOBuilderImpl.class
+    |           |   |       CreateInstanceResponseDTO.class
+    |           |   |       EvolutionSendMessageDTO$EvolutionSendMessageDTOBuilder.class
+    |           |   |       EvolutionSendMessageDTO$EvolutionSendMessageDTOBuilderImpl.class
+    |           |   |       EvolutionSendMessageDTO.class
+    |           |   |       
+    |           |   +---list
+    |           |   |       CampaignListDTO$CampaignListDTOBuilder.class
+    |           |   |       CampaignListDTO$CampaignListDTOBuilderImpl.class
+    |           |   |       CampaignListDTO.class
+    |           |   |       ClientListDTO$ClientListDTOBuilder.class
+    |           |   |       ClientListDTO$ClientListDTOBuilderImpl.class
+    |           |   |       ClientListDTO.class
+    |           |   |       DispatchListDTO$DispatchListDTOBuilder.class
+    |           |   |       DispatchListDTO$DispatchListDTOBuilderImpl.class
+    |           |   |       DispatchListDTO.class
+    |           |   |       UserListDTO$UserListDTOBuilder.class
+    |           |   |       UserListDTO$UserListDTOBuilderImpl.class
+    |           |   |       UserListDTO.class
+    |           |   |       
+    |           |   +---request
+    |           |   |       CampaignRequestDTO$CampaignRequestDTOBuilder.class
+    |           |   |       CampaignRequestDTO$CampaignRequestDTOBuilderImpl.class
+    |           |   |       CampaignRequestDTO.class
+    |           |   |       CampaignRequestSecondDTO$CampaignRequestSecondDTOBuilder.class
+    |           |   |       CampaignRequestSecondDTO$CampaignRequestSecondDTOBuilderImpl.class
+    |           |   |       CampaignRequestSecondDTO.class
+    |           |   |       ClientRequestDTO$ClientRequestDTOBuilder.class
+    |           |   |       ClientRequestDTO$ClientRequestDTOBuilderImpl.class
+    |           |   |       ClientRequestDTO.class
+    |           |   |       ClientRequestSecondDTO$ClientRequestSecondDTOBuilder.class
+    |           |   |       ClientRequestSecondDTO$ClientRequestSecondDTOBuilderImpl.class
+    |           |   |       ClientRequestSecondDTO.class
+    |           |   |       DispatchRequestDTO$DispatchRequestDTOBuilder.class
+    |           |   |       DispatchRequestDTO$DispatchRequestDTOBuilderImpl.class
+    |           |   |       DispatchRequestDTO.class
+    |           |   |       UserRequestClientDTO$UserRequestClientDTOBuilder.class
+    |           |   |       UserRequestClientDTO$UserRequestClientDTOBuilderImpl.class
+    |           |   |       UserRequestClientDTO.class
+    |           |   |       UserRequestDTO$UserRequestDTOBuilder.class
+    |           |   |       UserRequestDTO$UserRequestDTOBuilderImpl.class
+    |           |   |       UserRequestDTO.class
+    |           |   |       
+    |           |   \---response
+    |           |           CampaignResponseDTO$CampaignResponseDTOBuilder.class
+    |           |           CampaignResponseDTO$CampaignResponseDTOBuilderImpl.class
+    |           |           CampaignResponseDTO.class
+    |           |           ClientResponseDTO$ClientResponseDTOBuilder.class
+    |           |           ClientResponseDTO$ClientResponseDTOBuilderImpl.class
+    |           |           ClientResponseDTO.class
+    |           |           DispatchResponseDTO$DispatchResponseDTOBuilder.class
+    |           |           DispatchResponseDTO$DispatchResponseDTOBuilderImpl.class
+    |           |           DispatchResponseDTO.class
+    |           |           UserResponseDTO$UserResponseDTOBuilder.class
+    |           |           UserResponseDTO$UserResponseDTOBuilderImpl.class
+    |           |           UserResponseDTO.class
+    |           |           
+    |           +---entities
+    |           |       Campaign$CampaignBuilder.class
+    |           |       Campaign$CampaignBuilderImpl.class
+    |           |       Campaign.class
+    |           |       Client$ClientBuilder.class
+    |           |       Client$ClientBuilderImpl.class
+    |           |       Client.class
+    |           |       Dispatch$DispatchBuilder.class
+    |           |       Dispatch$DispatchBuilderImpl.class
+    |           |       Dispatch.class
+    |           |       EvolutionInstance$EvolutionInstanceBuilder.class
+    |           |       EvolutionInstance$EvolutionInstanceBuilderImpl.class
+    |           |       EvolutionInstance.class
+    |           |       Role$RoleBuilder.class
+    |           |       Role$RoleBuilderImpl.class
+    |           |       Role.class
+    |           |       User$UserBuilder.class
+    |           |       User$UserBuilderImpl.class
+    |           |       User.class
+    |           |       UserGroup$UserGroupBuilder.class
+    |           |       UserGroup$UserGroupBuilderImpl.class
+    |           |       UserGroup.class
+    |           |       
+    |           +---enums
+    |           |       CampaignType.class
+    |           |       ErrorEnum.class
+    |           |       
+    |           +---exception
+    |           |       CustomHandlerException.class
+    |           |       
+    |           +---mapper
+    |           |       CampaingMapper.class
+    |           |       CampaingMapperImpl.class
+    |           |       ClientMapper.class
+    |           |       ClientMapperImpl.class
+    |           |       DispatchMapper.class
+    |           |       DispatchMapperImpl.class
+    |           |       UserMapper.class
+    |           |       UserMapperImpl.class
+    |           |       
+    |           +---reflection
+    |           |       ReflectionUtil.class
+    |           |       
+    |           +---repository
+    |           |       CampaignRepository.class
+    |           |       ClientRepository.class
+    |           |       DispatchRepository.class
+    |           |       RoleRepository.class
+    |           |       UserGroupRepository.class
+    |           |       UserRepository.class
+    |           |       
+    |           +---service
+    |           |   |   ICampaingService.class
+    |           |   |   IClientService.class
+    |           |   |   IDispatchService.class
+    |           |   |   IEvolutionApiService.class
+    |           |   |   IUserService.class
+    |           |   |   
+    |           |   +---impl
+    |           |   |       CampaignService.class
+    |           |   |       ClientService.class
+    |           |   |       DispatchService.class
+    |           |   |       EvolutionApiService.class
+    |           |   |       UserProviderService.class
+    |           |   |       UserService.class
+    |           |   |       
+    |           |   \---validations
+    |           |       \---user
+    |           |               UserEmailValidate.class
+    |           |               UserExistEmail.class
+    |           |               UserExistLogin.class
+    |           |               
+    |           \---util
+    |                   Util.class
+    |                   
+    +---generated-sources
+    |   \---annotations
+    |       \---com
+    |           \---autowave
+    |               \---mapper
+    |                       CampaingMapperImpl.java
+    |                       ClientMapperImpl.java
+    |                       DispatchMapperImpl.java
+    |                       UserMapperImpl.java
+    |                       
+    +---generated-test-sources
+    |   \---test-annotations
+    +---maven-archiver
+    |       pom.properties
+    |       
+    +---maven-status
+    |   \---maven-compiler-plugin
+    |       +---compile
+    |       |   \---default-compile
+    |       |           createdFiles.lst
+    |       |           inputFiles.lst
+    |       |           
+    |       \---testCompile
+    |           \---default-testCompile
+    |                   createdFiles.lst
+    |                   inputFiles.lst
+    |                   
+    \---test-classes
+        \---com
+            \---autowave
+                    AutowaveApplicationTests.class
+                    

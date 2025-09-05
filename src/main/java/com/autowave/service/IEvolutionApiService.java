@@ -3,6 +3,7 @@ package com.autowave.service;
 import com.autowave.dto.evolution.ConnectInstanceResponseDTO;
 import com.autowave.dto.evolution.ConnectionStatusDTO;
 import com.autowave.dto.evolution.ClientSendMessageDTO;
+import com.autowave.dto.evolution.EvolutionWebhookDTO;
 
 public interface IEvolutionApiService {
     Object apiInformation();
@@ -13,4 +14,5 @@ public interface IEvolutionApiService {
     ConnectionStatusDTO connectionStatus();
     void sendMessages(ClientSendMessageDTO dto);
     Boolean checkIsWhatsApp(String number);
+    void processWebhook(EvolutionWebhookDTO event);
 }

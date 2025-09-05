@@ -34,4 +34,7 @@ public class Dispatch implements GenericModel<Long> {
     private Boolean delivered;
 
     private Boolean responded;
+
+    @Column(nullable = false)
+    private Boolean pending = true;
 }

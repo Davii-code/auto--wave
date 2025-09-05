@@ -58,7 +58,8 @@ public class AppStartupRunner implements ApplicationRunner {
                     "ROLE_EVOLUTION_CONNECT",
                     "ROLE_EVOLUTION_LOGOUT",
                     "ROLE_EVOLUTION_STATUS",
-                    "ROLE_EVOLUTION_SEND_MESSAGE");
+                    "ROLE_EVOLUTION_SEND_MESSAGE",
+                    "ROLE_EVOLUTION_WEBHOOK");
 
             List<Role> roleList = new ArrayList<>();
             for (String role : roles) {

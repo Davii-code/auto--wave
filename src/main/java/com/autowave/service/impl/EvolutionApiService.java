@@ -4,9 +4,11 @@ import com.autowave.base.exception.BusinessException;
 import com.autowave.client.EvolutionApiClient;
 import com.autowave.dto.evolution.*;
 import com.autowave.entities.Client;
+import com.autowave.entities.Dispatch;
 import com.autowave.entities.EvolutionInstance;
 import com.autowave.entities.User;
 import com.autowave.enums.ErrorEnum;
+import com.autowave.repository.DispatchRepository;
 import com.autowave.service.IEvolutionApiService;
 import com.autowave.service.IUserService;
 import com.autowave.util.Util;
@@ -14,8 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class EvolutionApiService implements IEvolutionApiService {
@@ -31,6 +35,9 @@ public class EvolutionApiService implements IEvolutionApiService {
 
     @Value("${integration_evolutionapi}")
     private String integration;
+
+    private DispatchRepository dispatchRepository;
+
 
     @Override
     public Object apiInformation() {
@@ -124,4 +131,29 @@ public class EvolutionApiService implements IEvolutionApiService {
 
         return response instanceof Boolean && (Boolean) response; // para evitar nulos
     }
+
+
+    public void processWebhook(EvolutionWebhookDTO event) {
+        String phone = event.getRemoteJid().replace("@s.whatsapp.net", "");
+
+        // Localiza último dispatch para esse cliente
+        Optional<Dispatch> dispatchOpt = dispatchRepository
+                .findTopByClientTelephoneOrderBySentAtDesc(phone);
+
+        if (dispatchOpt.isPresent()) {
+            Dispatch dispatch = dispatchOpt.get();
+
+            switch (event.getEvent()) {
+                case "message_delivered" -> dispatch.setDelivered(true);
+                case "message_read" -> dispatch.setDelivered(true); // ou criar campo readAt se quiser
+                case "message_received" -> {
+                    dispatch.setResponded(true);
+                    dispatch.setSentAt(LocalDateTime.now());
+                }
+            }
+
+            dispatchRepository.save(dispatch);
+        }
+    }
+
 }
