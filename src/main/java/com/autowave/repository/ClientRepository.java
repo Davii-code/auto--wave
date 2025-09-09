@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
-    List<Client> findByBirthday(LocalDate birthday);
-    List<Client> findByLastpurchaseBefore(LocalDate lastpurchase);
+    List<Client> findByDateofbirth(LocalDate birthday);
+    List<Client> findByLastPurchaseBefore(LocalDate lastpurchase);
     List<Client> findByLastPurchase(LocalDate lastpurchase);
 }

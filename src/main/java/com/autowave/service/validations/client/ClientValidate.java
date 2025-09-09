@@ -27,7 +27,7 @@ public class ClientValidate implements IValidations<Client> {
             if (data.getDateofbirth() != null && data.getDateofbirth().isAfter(LocalDate.now())) {
                 messagesToThrow.add(new Message(ErrorEnum.CLIENT_BIRTH_DATE_INVALID));
             }
-            if (data.getLastpurchase() != null && data.getLastpurchase().isAfter(LocalDate.now())) {
+            if (data.getLastPurchase() != null && data.getLastPurchase().isAfter(LocalDate.now())) {
                 messagesToThrow.add(new Message(ErrorEnum.CLIENT_LAST_PURCHASE_INVALID));
             }
             if (data.getUser() == null || data.getUser().getId() == null) {

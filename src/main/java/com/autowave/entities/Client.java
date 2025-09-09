@@ -35,7 +35,7 @@ public class Client  implements GenericModel<Long> {
     private  LocalDate dateofbirth;
 
     @Column(nullable = true, unique = true)
-    private LocalDate lastpurchase;
+    private LocalDate lastPurchase;
 
 
 }

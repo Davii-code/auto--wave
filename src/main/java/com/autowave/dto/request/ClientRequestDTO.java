@@ -22,7 +22,7 @@ public class ClientRequestDTO {
 
     private LocalDate dateofbirth;
 
-    private LocalDate lastpurchase;
+    private LocalDate lastPurchase;
 
     private UserRequestClientDTO user;
 }

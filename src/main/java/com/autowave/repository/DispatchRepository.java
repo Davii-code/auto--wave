@@ -15,7 +15,7 @@ public interface DispatchRepository extends JpaRepository<Dispatch, Long> {
     boolean existsByClientId(Long clientId);
 
     @Query("""
-        SELECT new com.autowave.dto.campaign.CampaignStatsDTO(
+        SELECT new com.autowave.dto.report.CampaignStatsDTO(
             c.id,
             c.name,
             COUNT(d.id),
@@ -32,7 +32,7 @@ public interface DispatchRepository extends JpaRepository<Dispatch, Long> {
 
     // Estatísticas de TODAS campanhas de um usuário
     @Query("""
-        SELECT new com.autowave.dto.campaign.CampaignStatsDTO(
+        SELECT new com.autowave.dto.report.CampaignStatsDTO(
             c.id,
             c.name,
             COUNT(d.id),

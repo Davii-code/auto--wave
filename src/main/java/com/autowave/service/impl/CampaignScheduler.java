@@ -38,12 +38,12 @@ public class CampaignScheduler {
     }
 
     private void processBirthdayCampaign(Campaign campaign) {
-        List<Client> clients = clientRepository.findByBirthday(LocalDate.now());
+        List<Client> clients = clientRepository.findByDateofbirth(LocalDate.now());
         createDispatches(campaign, clients);
     }
 
     private void processInactiveCampaign(Campaign campaign) {
-        List<Client> clients = clientRepository.findByLastpurchaseBefore(LocalDate.now().minusDays(30));
+        List<Client> clients = clientRepository.findByLastPurchaseBefore(LocalDate.now().minusDays(30));
         createDispatches(campaign, clients);
     }
 

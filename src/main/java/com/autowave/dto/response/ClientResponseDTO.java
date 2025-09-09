@@ -15,6 +15,6 @@ public class ClientResponseDTO {
     private Long id;
     private String name;
     private String telephone;
-    private LocalDate dateOfBirth;
+    private LocalDate dateofbirth;
     private LocalDate lastPurchase;
 }
